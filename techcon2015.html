@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TechCon 2015 Ruby Language</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# TechCon 2015
+
+###Ruby Language
+*Not boring as you thought*
+
+---
+
+class: center, middle
+
+# $whoami
+###An LP Nguyen
+####SSE R&D
+
+anlpnguyen@kms-technology.com
+
+---
+
+class: center, middle
+## I'm not going to introduce Ruby
+
+I'm going to introduce a fun, crazy and weird language
+
+
+---
+
+# Let's play a game
+- Easy
+- Normal
+- *Hard*
+- *Insane*
+
+---
+
+# Basic Knowledge
+array
+```ruby
+a = [1,2,3,4,5]
+```
+hash
+```ruby
+h = {key: "value", another_key:"another value"}
+h = {:key => "value", :another_key => "another value"}
+h = {"key" => "value", "another_key" => "another value"}
+```
+method
+```ruby
+object.method
+object.method(variable)
+```
+
+---
+# Easy level
+A given array
+```ruby
+a = [1,2,3,4,5]
+```
+
+--
+
+
+Get first element in an array 
+
+--
+
+```ruby
+a[0]
+```
+
+--
+
+Get last element in an array 
+
+--
+
+```ruby
+a[a.count - 1]
+```
+
+--
+
+Ruby way :)
+
+```ruby
+a.first
+a.last
+```
+
+---
+
+# Normal level
+
+```ruby
+if a == nil
+  a = 2
+Or:
+a = 2 if a == nil
+Or:
+a = a == nil ? 2 : a
+```
+
+--
+
+
+Ruby way
+```ruby
+a ||= 2
+```
+
+
+--
+
+
+array operators
+
+```ruby
+[1,2] << 3       == [1,2,3]
+[1,2] + [3,4,5]  == [1,2,3,4,5]
+[1,2] << [3,4,5] == [1,2,[3,4,5]]
+```
+
+---
+# Normal level
+
+Parallel assignment
+```ruby
+a = [1,2,3,4,5]
+c,d = a
+
+Result: 
+c = 1
+d = 2
+```
+
+--
+
+Is the following correct?
+```ruby
+a, = [1,2,3]
+```
+
+--
+
+```ruby
+a,b,(c,) = [1,2,[3,4,5]]
+```
+*crazy but still work!*
+
+---
+
+# Hard level
+
+Array methods
+
+```ruby
+[1,2,[3,4,5]].flatten 
+Result: [1,2,3,4,5]
+
+[1,2,3,4].map {|a| a+1}
+Result: [2, 3, 4, 5]
+
+[1,2,3,4].inject { |result, element| result + element }
+Result: 10
+```
+--
+
+Guess the code to sort this array?
+```ruby
+a = [4,2,1,6,7]
+```
+
+--
+
+
+```ruby
+a = [4,2,1,6,7]
+a.sort
+```
+
+---
+
+# Hard level
+
+A gift for who can explain the below code
+```ruby
+class Subclass < [Array, Hash, String, Fixnum, Float, TrueClass].sample
+
+end
+
+Subclass.superclass
+```
+
+---
+
+# Insane level
+
+Monkey-patch
+
+```ruby
+1.k
+NoMethodError: undefined method `k' for 1:Fixnum
+```
+
+--
+
+
+```ruby
+class Fixnum
+  def k
+    self * 1000
+  end
+end
+```
+
+--
+
+```ruby
+> 1.k
+ => 1000 
+```
+
+--
+
+
+usage
+```ruby
+1.days.ago
+10.minutes
+
+```
+
+
+--
+
+> monkey-patching is not considered a good practice
+
+---
+
+# Insane level
+
+Another gift
+
+```ruby
+result, = [[2,3],4,6]
+result.map {|x| x * x}
+```
+
+---
+
+class: center, middle
+# Summary
+
+---
+
+class: center, middle
+# Thank you!
+## Any thoughts?
+
+
+    </textarea>
+    <script src="remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
