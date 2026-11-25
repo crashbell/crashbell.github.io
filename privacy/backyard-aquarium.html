@@ -19,27 +19,35 @@ a{color:var(--accent)}
 <body>
 <main>
 <h1>Backyard Aquarium: Privacy Policy</h1>
-<p class="muted">Last updated: November 25, 2026</p>
+<p class="muted">Last updated: November 25, 2026 (version 0.4: analytics and online pond backup)</p>
 
 <p>Backyard Aquarium is a game by Crashbell (developer account "Duy Nguyen An" on Google Play). This policy explains what the game does with information about you.</p>
 
 <h2>Information we collect</h2>
-<p>None. The game does not collect, store on our servers, or share any personal information. It has no account or sign-in, no online leaderboard, no advertising, and no analytics service that sends data off your device.</p>
+<p>We do not ask for your name, email, contacts or any account details, and the game shows no ads. From version 0.4 the Android game uses two Google Firebase services:</p>
+<ul>
+<li><b>Game analytics (Firebase Analytics).</b> How the game is played, so we can make it better: for example when a level starts or ends, when a fish hatches or gets sick, season changes and whether music is on. With it Firebase receives an app-instance identifier, app version, device model, operating system, language and an approximate country derived from your IP address. Advertising ID collection and ad personalisation are turned off.</li>
+<li><b>Online pond backup (Firebase Authentication and Cloud Firestore).</b> The game signs in anonymously (a random ID, not linked to your Google account or any personal details) and saves a copy of your pond: your fish and their colours and patterns, fish book progress, eggs, plants, water condition, level and season. This prepares a future feature where players can visit each other's ponds, so other players of the game may be able to view your pond (never your identity, because there is none attached).</li>
+</ul>
+<p>We do not sell this information or share it with anyone else for their own use. Google processes it for us as our service provider under the <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase privacy and security terms</a>. Data is encrypted in transit.</p>
 
 <h2>Information stored on your device</h2>
-<p>Your pond, fish, fish book, settings and progress are saved only on your own device so you can continue where you left off. This data never leaves your device. Uninstalling the game or clearing its data deletes it.</p>
+<p>Your pond, fish, fish book, settings and progress are saved on your own device, which stays the main copy. Uninstalling the game or clearing its data deletes the device copy.</p>
+
+<h2>Retention and deletion</h2>
+<p>Analytics data is kept by Firebase for a limited time (at most 14 months) and then deleted by Firebase. Your online pond copy is kept while you play; to have it deleted, email us at the address below (tell us roughly when you played so we can find it) and we will remove it.</p>
 
 <h2>Notifications</h2>
 <p>If you allow it, the game may show a local reminder notification. Reminders are scheduled on your device; no information is sent anywhere.</p>
 
 <h2>Third parties</h2>
-<p>The game contains no third-party advertising or tracking libraries. Google Play, which you use to download the game, has its own <a href="https://policies.google.com/privacy" rel="noopener">privacy policy</a>.</p>
+<p>The game contains no advertising libraries. It uses Google Firebase as described above. Google Play, which you use to download the game, has its own <a href="https://policies.google.com/privacy" rel="noopener">privacy policy</a>.</p>
 
 <h2>Children</h2>
-<p>The game is not directed at children under 13 and collects no information from anyone, including children.</p>
+<p>The game is not directed at children under 13 and does not knowingly collect personal information from children.</p>
 
 <h2>Changes</h2>
-<p>If a future version starts handling personal information (for example ads or analytics), this page will be updated before that version is released, and the Google Play data safety section will say so.</p>
+<p>If the game starts handling other information, this page will be updated before that version is released, and the Google Play data safety section will say so.</p>
 
 <h2>Contact</h2>
 <p>Questions about this policy: <a href="mailto:nguyenan169@gmail.com">nguyenan169@gmail.com</a></p>
